@@ -1,0 +1,21 @@
+conceitos
+
+
+
+DAGS - FLUXO DE TRABALHO DEFINIDO EM PYTHON
+
+TASKS - UNIDADE MAIS BÁSICA DE UM DAG
+
+OPERATOR - ENCAPSULA A LÓGICA PARA FAZER UMA TASK
+
+
+
+arquitetura airflow
+
+web server
+
+scheduler
+
+DB
+
+executor

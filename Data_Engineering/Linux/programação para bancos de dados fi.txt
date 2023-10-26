@@ -1,0 +1,89 @@
+programação para bancos de dados fiap certificado
+
+
+cloud fundamentos fiap certificado
+
+
+big data fiap certificado
+
+
+nv 1 alura
+
+.linux
+.python/java
+.pipeline com apache airflow 
+.apache beam
+.postgre/aws
+
+
+linux fundamentos
+
+usando o server, confugrar vm e conectar pelo cmd com ssh user@host
+history
+pwd - diretório atual 
+ls - lista conteudo do diretorio
+ls -a - lista todos os arquivos ocultos do diretorio
+ls -al (ll) - lista todos os arquivos ocultos com mais detalhe
+--help
+man ls - abre o manual
+cd /dirname - muda o diretorio
+cd - home area11
+cd - volta o dir anterior
+cd .. volta um diretorio
+mkdir name - cria um diretorio
+mkdir -p dir1/dir2/dir3 - cria subdiretórios
+mkdir dir1 dir2 cria diretorios msm nivel
+touch arq ou .arq - cria arquivos dentro dos diretorios
+rmdir - remove diretorio
+rm - remove arquivos
+rm -r - remove todos arqs e dirs
+rm -rf - remove tudo
+cp -r dir1/* dir2 copia tudo da primeira para a segunda
+cp -r dir1/file dir2 - copia um arquivo em especifico da primeira para a segunda
+cp -r dir1 dir2 - joga copia da primeira dentro da segunda
+mv dir1 newdir - move o primeiro diretorio para um novo ainda inexistente perdendo o primeiro
+mv dir1/* dir4 - move tudo do primeiro para um segundo já existente
+mv arq1 arq10 -  renovmeia o arquivo
+
+
+
+globbing
+ls arq* todos que contem arq
+ls *1* todos que contem 1
+ls arq? uma casas decimais 
+ls arq?? duas casas decimais
+ls ???? arquivos de 4 caracteres 
+ls ???[1-5] arquivos de 4 caracteres cujo o 4° seja um numero de 1 a 5 se [1,5] seria com 1 ou 5
+exemplo: [A,a]rq; [a-b]; *[1-5]; [1,5]...
+
+Hierarquia file system fhs
+/bin/
+/boot/
+/dev/
+/etc/
+/home/
+/lib/
+/media/
+/mnt/
+/opt/
+/sbin/
+/srv/
+/tmp/
+/usr/
+/var/
+/root/
+/proc/
+
+
+cat arq - lê todo o texto do arquivo
+grep string arquivo - procura uma string em um file
+grep -i - ignora o case
+grep -l  - retorna o arquivo que contem a busca
+grep -L - retorna os arquivos que nao contem a busca
+grep -r - retorna os arquivos dentro dos diretorios que os contem, inclui os subdiretorios na busca
+
+
+more
+less
+tail -n x
+head
