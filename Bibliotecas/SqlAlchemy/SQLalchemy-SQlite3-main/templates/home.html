@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+  </head>
+<body>
+    
+<ul>
+  {{resultslist}}
+</ul>
+
+{% for row in resultslist %}
+<li>{{ row[0] }}</li>
+<li>{{ row[1] }}</li>
+<li>{{ row[2] }}</li>
+{% endfor %}
+
+{% for row in resultsdict %}
+<li>{{ row['id'] }}</li>
+<li>{{ row['name'] }}</li>
+<li>{{ row['password'] }}</li>
+{% endfor %}
+
+</body>
+</html>

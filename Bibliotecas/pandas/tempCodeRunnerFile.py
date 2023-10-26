@@ -1,0 +1,1 @@
+tables.export("foo.csv", f="csv", compress=True)

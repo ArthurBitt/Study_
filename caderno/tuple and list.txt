@@ -1,0 +1,85 @@
+lista anotações
+
+obs. passar listas como parâmetros deafult de um função, optar por usar None - desse forma if lista == None, sempre é gerada uma nova lista. Não ocorrem erros de referenciação a um mesmo objeto na memória
+
+iniciando listas
+
+lista = []
+lista = list()
+lista = None
+
+Exemplo aplicação:
+
+lista = [1990,1992,1994,1996,1997] - uma estrutura de dados que guarda todos os anos pares apartir de 1990.
+
+Alterando listas
+
+.append(item) - no final da lista adiciona
+.insert(i, item) - na posição desejada adiciona 
+.append([]) - no final adiciona uma lista dentro de outra lista
+
+
+.remove(item) - remove a primeira aparição de um item na lista
+.clear() - limpa o cache da lista
+.pop() - remove o último item da lista
+.pop(i) - remove o item na posição passada
+
+
+Interagindo com lista
+
+len(lista) - retorna o tamanho de uma lista	
+max(lista): Retorna o maior elemento da lista.
+min(lista): Retorna o menor elemento da lista.
+sum(lista): Retorna a soma dos elementos da lista
+sorted(lista): Retorna uma nova lista ordenada com os elementos da lista original, sem modificar a lista original.
+reversed(lista): Retorna um iterador que percorre os elementos da lista em ordem reversa.
+enumerate(lista): Retorna um iterador que produz pares de índice-elemento para cada elemento na lista.
+any(lista): Retorna True se pelo menos um elemento da lista for avaliado como verdadeiro, caso contrário, retorna False.
+all(lista): Retorna True se todos os elementos da lista forem avaliados como verdadeiros, caso contrário, retorna False.
+
+.count(item) - retorna o numero de vezes que o item aparece reptido na lista
+.extends() - mescla os valores de duas listas
+.sort(key=None, reverse = false/true) - ordena os valores de uma lista em crescente se parâmetro key=None, reverse = false e descrescente se key = None,reverse = true
+.copy(list) - copia uma lista // newList = list[:] outro jeito
+.index[i] - retorna os itens dentro do fatiamento
+
+Loops
+
+for i in lista - percorre todos os elementos da lista - acessa o conteudo com print(i)
+
+for i in range(len(lista)) - acessa o conteudo com print(lista[i]) e acessa o índice com print(i)
+
+
+List Comprehension
+
+[(faça) for i in array/lista] - executa uma ação com um loop em uma sequência iteravel com uma linha de código
+
+[(faça) for i in array/lista if i> valor]
+
+O faça pode ser substituído por funções, variáveis, operações...
+
+var1 = [(faça) for i in array/lista] - executa uma ação com loop for em uma sequência iteravel e armazena em uma nova variável, coleção de dados
+
+
+Tuplas
+
+obs. são utilizadas para representar valores ou sequencias de valores imutáveis - As tuplas costumam ser usadas para atribuir significado para as posições
+obs. Listas podem ser utilizadas dentro de tuplas e tuplas podem ser utilizadas dentro de listas
+
+Iniciando Tuplas
+
+tupla = ()
+tupla = tuple()
+tupla = None
+
+exemplo aplicação: 
+
+nomeIdade  = ("Arthur", 25) - um estrutar imutável que representa usuário apeans como nome idade - não há como adicionar ou remover valores.
+
+.count(item)
+.index(item)
+len(tuple)
+reversed(tuple)
+sorted(tuple)
+
+

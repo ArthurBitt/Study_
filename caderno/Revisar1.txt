@@ -1,0 +1,62 @@
+- json e jwt
+- métodos privados e atributos privados
+- static methods/ métodos da classe
+
+
+
+
+Sintaxe
+print input
+Strings
+if, elif, else
+for e while
+Funções
+Módulos
+
+Estruturas de Dados
+sets, listas, tuplas e dicionários
+Aula de estrutura de dados
+
+POO
+
+Classe
+objeto
+atributo
+métodos
+
+ENCAPSULAMENTO
+getter e setter -  atualizam e recuperam valores
+properties - encurtam o método, pode ser chamado sem () e o setter recebe parâmetro por = 
+métodos privados - funcianam em baixo nível na classe, comportamentos da classe ou reutilizar em outros métodos
+métodos da classe - recebem parametro cls/ self nos métodos das intaÂncias, acessam atributos das intâncias
+Métodos da classe/ StaticMethods - métodos que independem de objetos, funcionam na classe/ atributos da classe - não recebem parâmetro self
+
+
+-ASSOCIAÇÕES
+Herança
+.passar a classe mae como parametro para as classes filhas
+.modificar como boa prática para manutenção atributos privados para protegidos apenas
+.manter na classe filha somente os comportamentos e características especializados
+.utilizar super().__init__() para inicializar os atributos protegidos da classe mãe na classe filha
+.após o super()., inserir os atributos self.atributos da classe filhas, passar parâmetros do init da filha
+.Uma classe pode herdar um built in/ se herda um iterável, passa a ser um iterável
+
+Agregação 
+Composição
+
+
+POLIMORFISMO
+
+uma vez herdados comportamentos e atributos, é possível fazer com que uma referência seja representada por uma superclasse ou subclasse. Uma classe especializada será representada por uma referência de uma superclasse desde que os métodos genêricos por uma superclasse, sejam sobreescritos nas classes filhas, dessa forma, quando a referência chamar o método, esse irá se comportar de maneira especializada, respeitando a subclasse. Além disso, existe o DUNDERMETHOD __str__ que por meio de uma string, define como será exibido o objeto
+
+
+herda
+override de métodos
+__str__ modifica a representação dos objetos
+
+
+DUCKTYPING
+
+
+SOLID
+Design Patterns

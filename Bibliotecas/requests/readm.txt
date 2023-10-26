@@ -1,0 +1,62 @@
+Neste curso, iremos desempenhar o papel de pessoas engenheiras de dados em uma startup. Nosso objetivo é desenvolver um pipeline ETL utilizando a biblioteca Requests do Python e a API do GitHub.
+
+Durante o desenvolvimento deste projeto, vamos adquirir conhecimentos em várias áreas. Aprenderemos a fazer requisições GET, POST, PUT e DELETE utilizando a biblioteca Request do Python.
+
+Também aprenderemos a extrair e transformar dados no formato JSON, explorar diferentes endpoints da API do GitHub e compreender os diferentes status codes. Além disso, vamos abordar a autenticação e paginação utilizando a API do GitHub, estruturar um pipeline utilizando orientação a objetos, e muito mais.
+
+
+Pré requisitos linux
+
+Para desenvolver o projeto, nós vamos utilizar a linguagem Python e também vamos criar um ambiente virtual.
+
+Instalando pacotes
+Antes de realizarmos a instalação de alguns pacotes Python, é importante atualizarmos os pacotes já instalados no WSL. Para isso, podemos abrir o terminal do WSL e executar os seguintes comandos:
+
+sudo apt-get update
+COPIAR CÓDIGO
+sudo apt-get upgrade -y
+COPIAR CÓDIGO
+Feito isso, confira se você tem o Python instalado. Você pode fazer isso verificando a versão dele:
+
+python3 --version
+COPIAR CÓDIGO
+ou
+
+python3 -V
+COPIAR CÓDIGO
+A versão instalada na minha máquina é a 3.10.6.
+
+Agora, você pode instalar as bibliotecas pip e venv do Python:
+
+sudo apt install python3-pip -y
+COPIAR CÓDIGO
+sudo apt install python3-venv -y
+COPIAR CÓDIGO
+Criando um ambiente virtual
+Um ambiente virtual Python é como uma caixa separada onde você pode instalar e gerenciar pacotes Python para um projeto específico, sem interferir em outros projetos ou no Python do sistema.
+
+Antes de partirmos para a criação do nosso ambiente virtual, vamos criar uma pasta para o nosso projeto. Para isso, podemos abrir o terminal do WSL e utilizar o comando mkdir:
+
+mkdir projeto_Requests
+COPIAR CÓDIGO
+Acesse a pasta:
+
+cd projeto_Requests
+COPIAR CÓDIGO
+Feito isso, podemos executar o comando para criação do ambiente virtual:
+
+sudo apt install python3-venv
+
+
+python3 -m venv venv
+COPIAR CÓDIGO
+Em seguida, podemos ativar o ambiente:
+
+source venv/bin/activate
+COPIAR CÓDIGO
+E com o ambiente ativado, podemos instalar as bibliotecas que vamos utilizar no decorrer do nosso projeto:
+
+pip install requests==2.28.2
+COPIAR CÓDIGO
+pip install pandas==2.0.0
+COPIAR CÓDIGgo

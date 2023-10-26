@@ -1,0 +1,57 @@
+caderno
+
+listas, ranges, tuplas
+
+Strings
+
+Funções e Módulos
+
+
+
+Escrita de arquivos
+
+
+Função open(): recebe o nome do arquivo e o modo de abertura.
+
+Modos de abertura - w,r,a
+
+write: escreve no documento
+read : le o documento
+append : adiciona ao documento já escrito
+
+arquivo = open("file.txt", "modo de abertura")
+
+
+Método .close() : encerrar o canal aberto
+
+
+arquivo.close()
+
+
+
+Método .write() : após iniciar o documento em modo w, ou reinicia-lo em mode a, chama-se o método .write() para escrever.
+
+
+arquivo.write("Banana")
+
+>> 6 
+
+o método retorna o número de caracteres escritos.
+
+
+Leitura de Arquivos
+
+Método .read(): lê todo o arquivo uma primeira vez. É necessário encerrar com .close() para abri-lo outra vez.
+Iterando com for
+é possível passar após arquivo = open("file.txt", "r") um laço em arquivo.
+
+for linha in arquivo:
+	print(linha)
+
+Método readline()
+
+linha = arquivo.readline() - lê a linha em que se encontra aberto, exemplo: ao fim de um loop que roda todo o txt, abrindo um readline() ele lerá a última linha do loop
+
+obs. para remover sujeiras da string, como \n, basta utilizar o .strip em linha.strip()
+*
+
