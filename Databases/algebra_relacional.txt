@@ -6,13 +6,16 @@ produto cartesiano, junção natura, esqueda e direita
 
 união, intersecção e diferença de conjuntos
 
-OPERAÇÕES
+OPERAÇÕES PRIMITIVAS/UNÁRIAS
 
 .Seleção - filtro de linhas/relação (condição) ->ALGREL σ cidade = 'Rio de Janeiro'(Clientes) - Filtrar na tabela clientes apenas os que possuem valor cidade =  Rio de Janeiro.
 .Projeção - filtro de colunas - > ALGREL π nome, anox_xp (Vendedores) - Filtra na tabela a coluna que possui os nomes dos vendedores e sua experiência em anos
 .Projeção/Seleção - filtro coluna/linhas -> ALGREL π nome, email(σ cidade = 'Rio de Janeiro' (Clientes)) - Filtra pelas colunas nome e email as linhas onde cidade = Rio de Janeiro 
-.Produto Cartesiano - Relação entre tabelas -> ALGREL π Clientes.nome, Livros.nome_livro (Livros x Clientes) - Relaciona cada nome_livro com cada nome de Clientes (Custoso!/ Mtas)
 
+
+OPERAÇÕES BINÁRIAS
+.Produto Cartesiano - Relação entre tabelas/linhas x linhas -> ALGREL π Clientes.nome, Livros.nome_livro (Livros x Clientes) - Relaciona cada nome_livro com cada nome de Clientes (Custoso!)
+.Junção - 
 
 script base de dados - ferramenta relax
 
