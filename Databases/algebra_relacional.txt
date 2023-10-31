@@ -13,15 +13,21 @@ OPERAÇÕES PRIMITIVAS/UNÁRIAS
 .Projeção/Seleção - filtro coluna/linhas -> ALGREL π nome, email(σ cidade = 'Rio de Janeiro' (Clientes)) - Filtra pelas colunas nome e email as linhas onde cidade = Rio de Janeiro 
 
 
-OPERAÇÕES BINÁRIAS
+OPERAÇÕES BINÁRIAS / Tratar tabelas diferentes 
+
 .Produto Cartesiano - Relação entre tabelas/linhas x linhas -> ALGREL π Clientes.nome, Livros.nome_livro (Livros x Clientes) - Relaciona cada nome_livro com cada nome de Clientes (Custoso!)
-.Junção - 
+
+.Junção - Produto cartesiano com filtro e projeção. ALGREL -> π id_pedido, id_vendedor, id_vendedor_vendas, Vendedores.nome (Vendas ⨝ id_vendedor_vendas = id_vendedor Vendedores) 
+Projeta as colunas selecionadas e igual o id_vendedor da tabela vendas ao id_vendedor da tabela vendedores 
+ 
+.junção natural - π id_pedido, id_livro, nome_livros (Vendas ⨝ id_livro = id_livro Livros) // quando atributos de nomes iguais em tabelas diferentes, a junção é natural, logo -> ALGREL π id_pedido, id_livro, nome_livro (Vendas ⨝ Livros) 
+
+.Junção à direita/esquerda  -> ALGREL  π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores)
 
 script base de dados - ferramenta relax
 
 group: Clube do Livro
 
-group: Clube do Livro 
 
 Vendedores = {
 id_vendedor, nome, anos_xp
@@ -142,8 +148,10 @@ id_livro, fonte_recomendacao, nota_media
 
  Querys Práticas Base de Dados Clube do Livro - Testar no Relax Web - Algebra Relacional Querys
 
- -- Quais são os vendedores que possuem mais de 5 anos de experiência?
--- σ anos_xp >5 (Vendedores)
+ Consultas unárias seleção e projeção
+
+-- Quais são os vendedores que possuem mais de 5 anos de experiência?
+-- σ anos_xp > 5 (Vendedores)
 
 -- Quais são os nomes dos livros que possuem preço maior que R$50?
 -- σ preco > 50 (Livros)
@@ -171,3 +179,15 @@ id_livro, fonte_recomendacao, nota_media
 
 -- Quais livros atendem os requisitos do amigo oculto do cliente André: ser um livro de George Orwell ou de qualquer outra autoria que seja mais caro que 30 reais? 
 π autor, preco, nome_livro (σ preco > 30 ∨ autor = 'George Orwell' (Livros))
+
+-- Qual o nome e preço dos livros que custam até 19 reais?
+-- π Livros.nome_livro, Livros.preco (σ Livros.preco <= 19 (Livros) ) 
+
+
+Consultas binárias - Produto cartesiano e Junções
+
+-- Quais vendedores não realizaram vendas ?
+-- π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores)
+-- σ id_vendedor_vendas = null (π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores))
+
+
