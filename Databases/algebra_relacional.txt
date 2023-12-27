@@ -13,7 +13,7 @@ OPERAÇÕES PRIMITIVAS/UNÁRIAS
 .Projeção/Seleção - filtro coluna/linhas -> ALGREL π nome, email(σ cidade = 'Rio de Janeiro' (Clientes)) - Filtra pelas colunas nome e email as linhas onde cidade = Rio de Janeiro 
 
 
-OPERAÇÕES BINÁRIAS / Tratar tabelas diferentes 
+OPERAÇÕES BINÁRIAS / Tratar tabelas diferentes/PRECISAM DE ALGUM TIPO DE RELAÇÃO/MESMO ATRIBUTO EM TABELAS DIFERENTES
 
 .Produto Cartesiano - Relação entre tabelas/linhas x linhas -> ALGREL π Clientes.nome, Livros.nome_livro (Livros x Clientes) - Relaciona cada nome_livro com cada nome de Clientes (Custoso!)
 
@@ -23,6 +23,17 @@ Projeta as colunas selecionadas e igual o id_vendedor da tabela vendas ao id_ven
 .junção natural - π id_pedido, id_livro, nome_livros (Vendas ⨝ id_livro = id_livro Livros) // quando atributos de nomes iguais em tabelas diferentes, a junção é natural, logo -> ALGREL π id_pedido, id_livro, nome_livro (Vendas ⨝ Livros) 
 
 .Junção à direita/esquerda  -> ALGREL  π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores)
+
+OPERAÇÕES CONJUNTOS - NÃO PRECISAM DE RELAÇÃO ENTRE AS TABELAS/USO DE CHAVES PARA COMUNICAR
+.União - uma coisa ou outra coisa -> ALGREL π id_livro(LivroMaisVendidos) ∪ π id_livro(LivrosRecomendados) -- mais vendidos ou  mais recomendados
+.Intersecção - uma coisa e outra coisa ->  ALGREL  π id_livro(LivroMaisVendidos) ∩ π id_livro(LivrosRecomendados) -- mais vendidos/e mais recomendados
+.Diferença - uma coisa menos outra coisa -> ALGREL (π id_livro (Livros) - π id_livro(Vendas))
+
+OUTRAS OPERAÇÕES
+. Renomear relações -> ALGREL (ρ V Vendedores x Vendedores) - Renomeia uma entidade, para que possa ser trabalhada com ela mesma 
+. Renomear atributos -> ALGREL ρ (CodigoCliente ←ID, NomeCliente←NC, Email←E) (ρ CadastroCliente Cliente)
+
+
 
 script base de dados - ferramenta relax
 
@@ -151,43 +162,51 @@ id_livro, fonte_recomendacao, nota_media
  Consultas unárias seleção e projeção
 
 -- Quais são os vendedores que possuem mais de 5 anos de experiência?
--- σ anos_xp > 5 (Vendedores)
+σ anos_xp > 5 (Vendedores)
 
 -- Quais são os nomes dos livros que possuem preço maior que R$50?
 -- σ preco > 50 (Livros)
--- σ preco < 50 (Livros)
+σ preco < 50 (Livros)
 
--- π nome, email(σ cidade = 'Rio de Janeiro' (Clientes)),
+π nome, email(σ cidade = 'Rio de Janeiro' (Clientes)),
 
 -- Quais são os códigos de livros recomendados pela revista ‘BestBooks Magazine’?
--- π id_livro, fonte_recomendacao(σ fonte_recomendacao = 'BestBooks Magazine'(LivrosRecomendados))
+π id_livro, fonte_recomendacao(σ fonte_recomendacao = 'BestBooks Magazine'(LivrosRecomendados))
 
 -- Quais são os livros com estoque menor que 20 unidades?
--- π id_livro, qtd_estoque (σ qtd_estoque < 20 (Livros))
+π id_livro, qtd_estoque (σ qtd_estoque < 20 (Livros))
 
 -- Quais são os códigos dos livros mais vendidos durante o ano de 2021?
--- π id_livro, mais_vendidos, ano (σ ano = 2021 (LivroMaisVendidos))
+π id_livro, mais_vendidos, ano (σ ano = 2021 (LivroMaisVendidos))
 
 -- Quais são os livros com preço entre R$30 e R$50?
--- π preco, nome_livro (σ preco < 50 ∧ preco > 30 (Livros))
+π preco, nome_livro (σ preco < 50 ∧ preco > 30 (Livros))
 
 -- Existe algum livros sem exemplar em estoque? Quais?
--- π qtd_estoque, nome_livro(σ qtd_estoque = 0 (Livros))
+π qtd_estoque, nome_livro(σ qtd_estoque = 0 (Livros))
 
 -- Quais são os livros que custam mais de R$ 50 e contém mais de 5 unidades no estoque?
--- π qtd_estoque, preco, nome_livro(σ qtd_estoque>5 ∧ preco > 50  (Livros))
+π qtd_estoque, preco, nome_livro(σ qtd_estoque>5 ∧ preco > 50  (Livros))
 
 -- Quais livros atendem os requisitos do amigo oculto do cliente André: ser um livro de George Orwell ou de qualquer outra autoria que seja mais caro que 30 reais? 
 π autor, preco, nome_livro (σ preco > 30 ∨ autor = 'George Orwell' (Livros))
 
 -- Qual o nome e preço dos livros que custam até 19 reais?
--- π Livros.nome_livro, Livros.preco (σ Livros.preco <= 19 (Livros) ) 
+π Livros.nome_livro, Livros.preco (σ Livros.preco <= 19 (Livros) ) 
 
 
 Consultas binárias - Produto cartesiano e Junções
 
 -- Quais vendedores não realizaram vendas ?
--- π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores)
--- σ id_vendedor_vendas = null (π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores))
+π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores)
+σ id_vendedor_vendas = null (π id_vendedor, id_vendedor_vendas, nome (Vendas ⟖ id_vendedor_vendas = id_vendedor Vendedores))
 
 
+-- Quais livros da “Colleen Houck” venderam mais de 3 exemplares em um único pedido?
+π id_pedido, nome_livro, qtd_vendida (σ Livros.autor = 'Colleen Houck' ∧ Vendas.qtd_vendida > 3 (Vendas ⨝ Livros))
+
+-- Quais são os livros que tiveram vendas acima de 2 unidades em um único pedido?
+π nome_livro, id_pedido, qtd_vendida(σ Vendas.qtd_vendida > 2 (Vendas ⨝ Livros))
+
+-- Qual o nome dos livros mais recomendados com nota média superior a 4.3?
+π nome_livro, nota_media,fonte_recomendacao(σ LivrosRecomendados.nota_media > 4.3(LivrosRecomendados ⨝ id_livro = id_livro Livros))
