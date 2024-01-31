@@ -1,7 +1,0 @@
-Dicionário : armazena e agrupa pares de valores {key: value}
-
-
-classes abstratas : não podem ser instanciadas, possuem métodos abstratos ou concretos, bem como atributos abstratos ou concretos. Para torna-la não instanciável é preciso utilizar from abc import ABC, abstractmethod e ter pelo menos um métodos abstrato decorado com o decorador @abstractmethod sobre o método.
-
-
-Seu uso é feito para fazer blueprints de superclasses, de modo que as subclasses possam utilzar ou sobreescrever os métodos e atributos herdados. Com isso, garantem o uso uniforme das subclasses, aplicando o polimorfismo no código, onde uma referência a superclasse abstrata serve para diferentes objetos das suas subclasses.

@@ -1,0 +1,156 @@
+A função print() desempenha um papel fundamental para imprimir texto e variáveis no console ou em outro local de saída. Ao longo das diferentes versões do Python, a sintaxe e os recursos dessa função evoluíram, oferecendo diversas maneiras de formatar e exibir mensagens.
+
+Para praticar essa função, criamos a seguir uma lista de atividades (não obrigatórias) focada em prática para melhorar ainda mais sua experiência de aprendizagem. Bora praticar então?
+
+Exercícios
+1 - Imprima a frase: Python na Escola de Programação da Alura.
+
+2 - Imprima a frase: Meu nome é {nome} e tenho {idade} anos em que nome e idade precisam ser valores armazenados em variáveis.
+
+3 - Imprima a palavra: ‘ALURA’ de modo que cada letra fique em uma linha, como mostrado a seguir:
+A
+L
+U
+R
+A
+
+
+4 - Imprima a frase: O valor arredondado de pi é: {pi_arredondado} em que o valor de pi precisa ser armazenado em uma variável e arredondado para apenas duas casas decimais. Para facilitar, utilize:
+
+pi = 3.14159
+
+
+Exercícios
+1 - Solicite ao usuário que insira um número e, em seguida, use uma estrutura if else para determinar se o número é par ou ímpar.
+
+2 - Pergunte ao usuário sua idade e, com base nisso, use uma estrutura if elif else para classificar a idade em categorias de acordo com as seguintes condições:
+
+Criança: 0 a 12 anos;
+Adolescente: 13 a 18 anos;
+Adulto: acima de 18 anos.
+3 - Solicite um nome de usuário e uma senha e use uma estrutura if else para verificar se o nome de usuário e a senha fornecidos correspondem aos valores esperados determinados por você.
+
+4 - Solicite ao usuário as coordenadas (x, y) de um ponto qualquer e utilize uma estrutura if elif else para determinar em qual quadrante do plano cartesiano o ponto se encontra de acordo com as seguintes condições:
+
+Primeiro Quadrante: os valores de x e y devem ser maiores que zero;
+Segundo Quadrante: o valor de x é menor que zero e o valor de y é maior que zero;
+Terceiro Quadrante: os valores de x e y devem ser menores que zero;
+Quarto Quadrante: o valor de x é maior que zero e o valor de y é menor que zero;
+Caso contrário: o ponto está localizado no eixo ou origem.
+
+
+1 - Crie uma lista para cada informação a seguir:
+
+Lista de números de 1 a 10;
+Lista com quatro nomes;
+Lista com o ano que você nasceu e o ano atual.
+2 - Crie uma lista e utilize um loop for para percorrer todos os elementos da lista.
+
+3 - Utilize um loop for para calcular a soma dos números ímpares de 1 a 10.
+
+4 - Utilize um loop for para imprimir os números de 1 a 10 em ordem decrescente.
+
+5 - Solicite ao usuário um número e, em seguida, utilize um loop for para imprimir a tabuada desse número, indo de 1 a 10.
+
+6 - Crie uma lista de números e utilize um loop for para calcular a soma de todos os elementos. Utilize um bloco try-except para lidar com possíveis exceções.
+
+7 - Construa um código que calcule a média dos valores em uma lista. Utilize um bloco try-except para lidar com a divisão por zero, caso a lista esteja vazia.
+
+
+Exercícios
+1 - Crie um dicionário representando informações sobre uma pessoa, como nome, idade e cidade.
+
+2 - Utilizando o dicionário criado no item 1:
+
+Modifique o valor de um dos itens no dicionário (por exemplo, atualize a idade da pessoa);
+Adicione um campo de profissão para essa pessoa;
+Remova um item do dicionário.
+3 - Crie um dicionário utilizando para representar números e seus quadrados de 1 a 5.
+
+4 - Crie um dicionário e verifique se uma chave específica existe dentro desse dicionário.
+
+5 - Escreva um código que conte a frequência de cada palavra em uma frase utilizando um dicionário.
+
+Exercícios
+Crie uma docstring para a função exibir_nome_do_programa()
+Crie uma docstring para a função exibir_opcoes()
+Crie uma docstring para a função finalizar_app()
+Crie uma docstring para a função opcao_invalida()
+Crie uma docstring para a função exibir_subtitulo(texto)
+Crie uma docstring para a função cadastrar_novo_restaurante()
+Crie uma docstring para a função listar_restaurantes()
+Crie uma docstring para a função alternar_estado_restaurante()
+Crie uma docstring para a função escolher_opcao()
+Crie uma docstring para a função main()
+
+
+Exercícios
+Atribua o valor 'Italiana' ao atributo categoria da instância restaurante_praca da classe Restaurante.
+Acesse o valor do atributo nome da instância restaurante_praca da classe Restaurante.
+Verifique o valor inicial do atributo ativo para a instância restaurante_praca e exiba uma mensagem informando se o restaurante está ativo ou inativo.
+Acesse o valor do atributo de classe categoria diretamente da classe Restaurante e armazene em uma variável chamada categoria.
+Altere o valor do atributo nome para 'Bistrô'.
+Crie uma nova instância da classe Restaurante chamada restaurante_pizza com o nome 'Pizza Place' e categoria 'Fast Food'.
+Verifique se a categoria da instância restaurante_pizza é 'Fast Food'.
+Mude o estado da instância restaurante_pizza para ativo.
+Imprima no console o nome e a categoria da instância restaurante_praca.
+
+Exercícios
+Implemente uma classe chamada Carro com os atributos básicos, como modelo, cor e ano. Crie uma instância dessa classe e atribua valores aos seus atributos.
+Crie uma classe chamada Restaurante com os atributos nome, categoria, ativo e crie mais 2 atributos. Instancie um restaurante e atribua valores aos seus atributos.
+Modifique a classe Restaurante adicionando um construtor que aceita nome e categoria como parâmetros e inicia ativo como False por padrão. Crie uma instância utilizando o construtor.
+Adicione um método especial __str__ à classe Restaurante para que, ao imprimir uma instância, seja exibida uma mensagem formatada com o nome e a categoria. Exiba essa mensagem para uma instância de restaurante.
+Crie uma classe chamada Cliente e pense em 4 atributos. Em seguida, instancie 3 objetos desta classe e atribua valores aos seus atributos através de um método construtor.
+
+Desafios
+Crie uma classe chamada ContaBancaria com um construtor que aceita os parâmetros titular e saldo. Inicie o atributo ativo como False por padrão.
+
+Na classe ContaBancaria, adicione um método especial __str__ que retorna uma mensagem formatada com o titular e o saldo da conta. Crie duas instâncias da classe e imprima essas instâncias.
+
+Adicione um método de classe chamado ativar_conta à classe ContaBancaria que define o atributo ativo como True. Crie uma instância da classe, chame o método de classe e imprima o valor de ativo.
+
+Refatore a classe ContaBancaria para utilizar a abordagem "pythonica" na criação de atributos. Utilize propriedades, se necessário.
+
+Crie uma instância da classe e imprima o valor da propriedade titular.
+
+Crie uma classe chamada ClienteBanco com um construtor que aceita 5 atributos. Instancie 3 objetos desta classe e atribua valores aos seus atributos através do método construtor.
+
+Crie um método de classe para a conta ClienteBanco.
+
+
+Exercícios
+Crie uma classe chamada Livro com um construtor que aceita os parâmetros titulo, autor e ano_publicacao. Inicie um atributo chamado disponivel como True por padrão.
+
+Na classe Livro, adicione um método especial str que retorna uma mensagem formatada com o título, autor e ano de publicação do livro. Crie duas instâncias da classe Livro e imprima essas instâncias.
+
+Adicione um método de instância chamado emprestar à classe Livro que define o atributo disponivel como False. Crie uma instância da classe, chame o método emprestar e imprima se o livro está disponível ou não.
+
+Adicione um método estático chamado verificar_disponibilidade à classe Livro que recebe um ano como parâmetro e retorna uma lista dos livros disponíveis publicados nesse ano.
+
+Crie um arquivo chamado biblioteca.py e importe a classe Livro neste arquivo.
+
+No arquivo biblioteca.py, empreste o livro chamando o método emprestar e imprima se o livro está disponível ou não após o empréstimo.
+
+No arquivo biblioteca.py, utilize o método estático verificar_disponibilidade para obter a lista de livros disponíveis publicados em um ano específico.
+
+Crie um arquivo chamado main.py, importe a classe Livro e, no arquivo main.py, instancie dois objetos da classe Livro e exiba a mensagem formatada utilizando o método str.
+
+
+Exercícios
+Crie uma Classe Pai (Veiculo): Implemente uma classe chamada Veiculo com um construtor que aceita dois parâmetros, marca e modelo. A classe deve ter um atributo protegido _ligado inicializado como False por padrão.
+Construa o Método Especial str: Adicione um método especial str à classe Veiculo que retorna uma mensagem formatada com a marca, modelo e o estado de ligado/desligado do veículo.
+Crie uma Classe Filha (Carro): Agora, crie uma classe chamada Carro que herda da classe Veiculo. No construtor da classe Carro, inclua um novo atributo chamado portas que indica a quantidade de portas do carro.
+Implemente o Método Especial str na Classe Filha: Adicione um método especial str à classe Carro que estenda o método da classe pai (Veiculo) e inclua a informação sobre a quantidade de portas do carro.
+Crie uma Classe Filha (Moto): Similarmente, crie uma classe chamada Moto que também herda de Veiculo. Adicione um novo atributo chamado tipo ao construtor, indicando se a moto é esportiva ou casual.
+Implemente o Método Especial str na Classe Filha (Moto): Adicione um método especial str à classe Moto que estenda o método da classe pai (Veiculo) e inclua a informação sobre o tipo da moto.
+Crie um Arquivo Main (main.py): Crie um arquivo chamado main.py no mesmo diretório que suas classes.
+Importe e Instancie Objetos: No arquivo main.py, importe as classes Carro e Moto. Em seguida, crie três instâncias de Carro e Moto com diferentes marcas, modelos, quantidade de portas e tipos.
+Exiba as Informações: Para cada instância, imprima no console as informações utilizando o método str.
+
+Exercícios
+Crie uma classe chamada Veiculo com um método abstrato chamado ligar.
+No mesmo arquivo, crie um construtor para a classe Veiculo que aceita os parâmetros marca e modelo.
+Crie uma nova classe chamada Carro que herda da classe Veiculo.
+No construtor da classe Carro, utilize o método super() para chamar o construtor da classe pai e atribua o atributo específico cor à classe filha.
+Em um arquivo chamado main.py, importe a classe Carro.
+No arquivo main.py, instancie três objetos da classe Carro com diferentes características, como marca, modelo e cor.
