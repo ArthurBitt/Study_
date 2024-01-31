@@ -26,7 +26,7 @@ class Restaurante:
             # ljust(int) aplica espaçamento
             print(f'Nome: {restaurante.nome} | Especialidade: {restaurante.especialidade} | Ativo: {restaurante.ativo}')             
 
-    @property
+    @property # @property define uma propriedade da classe - o metodo ativo pode ser chamado agora sem ()
     def ativo(self):
         return "Ativo" if self._ativo == True else "Desativado"
 
