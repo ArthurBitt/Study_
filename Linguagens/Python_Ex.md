@@ -32,7 +32,7 @@ pi = 3.14159
 
 ```
 
-# Exercícios de Condicionais em Python
+## Exercícios de Condicionais em Python
 
 As estruturas condicionais, como `if`, `elif` e `else`, são fundamentais para a lógica de programação, permitindo que o código reaja de maneiras diferentes dependendo das condições atuais. Essas estruturas são usadas para testar se uma condição é verdadeira ou falsa e executar um bloco de código correspondente.
 
@@ -51,7 +51,6 @@ Para ajudar a aprimorar suas habilidades com essas estruturas, criamos uma lista
     - Quarto Quadrante: o valor de x é maior que zero e o valor de y é menor que zero;
     - Caso contrário: o ponto está localizado no eixo ou origem.
 
-# Exercícios de Python
 
 ## Exercícios de Listas e Loops
 
@@ -97,8 +96,6 @@ Docstrings são uma maneira de documentar suas funções, métodos, módulos e c
 8. Crie uma docstring para a função `alternar_estado_restaurante()`
 9. Crie uma docstring para a função `escolher_opcao()`
 10. Crie uma docstring para a função `main()`
-
-# Exercícios de Python
 
 ## Exercícios de Atributos e Métodos de Instância
 
