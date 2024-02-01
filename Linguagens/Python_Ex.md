@@ -1,3 +1,11 @@
+# Livros
+```
+https://penseallen.github.io/PensePython2e/
+https://pythonfluente.com/
+```
+
+
+
 # Exercícios de Python
 
 A função `print()` desempenha um papel fundamental para imprimir texto e variáveis no console ou em outro local de saída. Ao longo das diferentes versões do Python, a sintaxe e os recursos dessa função evoluíram, oferecendo diversas maneiras de formatar e exibir mensagens.
